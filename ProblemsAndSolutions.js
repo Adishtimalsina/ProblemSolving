@@ -22,3 +22,4 @@ if (size !== n) {
   findMissing(array);
 }
 //Output = 2 3 4 5 7
+//Time complexity = O(n)
