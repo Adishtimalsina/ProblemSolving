@@ -24,23 +24,23 @@ if (size !== n) {
 //Output = 2 3 4 5 7
 //Time complexity = O(n)
 
-Problem 2: Two friends Anna and Brian, are deciding how to split the bill at a dinner. Each will only pay for the items they consume. Brian gets the check and calculates Anna's portion. You must determine if his calculation is correct.
-For example, assume the bill has the following prices: . Anna declines to eat item  which costs . If Brian calculates the bill correctly, Anna will pay . If he includes the cost of , he will calculate . In the second case, he should refund  to Anna.
+// Problem 2: Two friends Anna and Brian, are deciding how to split the bill at a dinner. Each will only pay for the items they consume. Brian gets the check and calculates Anna's portion. You must determine if his calculation is correct.
+// For example, assume the bill has the following prices: . Anna declines to eat item  which costs . If Brian calculates the bill correctly, Anna will pay . If he includes the cost of , he will calculate . In the second case, he should refund  to Anna.
 
-bill: an array of integers representing the cost of each item ordered
-k: an integer representing the zero-based index of the item Anna doesn't eat
-b: the amount of money that Anna contributed to the bill
+// bill: an array of integers representing the cost of each item ordered
+// k: an integer representing the zero-based index of the item Anna doesn't eat
+// b: the amount of money that Anna contributed to the bill
 
-Output Format
-If Brian did not overcharge Anna, print Bon Appetit on a new line; otherwise, print the difference (i.e. charged - actual ) that Brian must refund to Anna. This will always be an integer.
-Sample Input 0
-4 1
-3 10 2 9
-12
-Sample Output 0
-5
-Explanation 0
-Anna didn't eat item k=1, bill[1]=10 , but she shared the rest of the items with Brian. The total cost of the shared items is 3+2+9=14 and, split in half, the cost per person is 7. Brian charged her b=12 for her portion of the bill. We print the amount Anna was overcharged, charged(b)-actual = 12-7=5, on a new line.
+// Output Format
+// If Brian did not overcharge Anna, print Bon Appetit on a new line; otherwise, print the difference (i.e. charged - actual ) that Brian must refund to Anna. This will always be an integer.
+// Sample Input 0
+// 4 1
+// 3 10 2 9
+// 12
+// Sample Output 0
+// 5
+// Explanation 0
+// Anna didn't eat item k=1, bill[1]=10 , but she shared the rest of the items with Brian. The total cost of the shared items is 3+2+9=14 and, split in half, the cost per person is 7. Brian charged her b=12 for her portion of the bill. We print the amount Anna was overcharged, charged(b)-actual = 12-7=5, on a new line.
 
 //Solution
 function bonAppetit(bill, k, b) {
