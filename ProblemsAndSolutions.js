@@ -63,3 +63,39 @@ function bonAppetit(bill, k, b) {
 bonAppetit([3, 10, 2, 9],1,12)
 //output 5
 //time complexity = O(n)
+
+//Problem 3: Given an array of bird sightings where every element represents a bird type id, determine the id of the most frequently sighted type. 
+//If more than 1 type has been spotted that maximum amount, return the smallest of their ids.
+//Example
+//birdType = [1, 1, 2, 2, 3];
+//There are two each of types 1 and 2, and one sighting of type 3. Pick the lower of the two types seen twice: type 1.
+//example
+//birdType = [1,2,2,2,4,4,4,5,3]
+//it needs to return 2 cause it is the max repeated and minimum type of bird
+
+birdType = [1, 2, 2, 2, 4, 4, 4, 5, 3];
+
+const HashMap = new Map();
+
+for (let i = 0; i < birdType.length; i++) {
+  if (HashMap.has(birdType[i])) {
+    HashMap.set(birdType[i], HashMap.get(birdType[i]) + 1);
+  } else {
+    HashMap.set(birdType[i], 1);
+  }
+}
+
+let maxNumber = 0;
+let minBirdType;
+
+for (const [key, value] of HashMap) {
+  if (value > maxNumber || (value === maxNumber && key < minBirdType)) {
+    maxNumber = value;
+    minBirdType = key;
+  }
+}
+
+return minBirdType;
+
+//Time complexity of the code O(n) 
+
