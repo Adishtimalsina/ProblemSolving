@@ -29,7 +29,11 @@ public class Main {
         linkedList.insertAtHead(0);
         linkedList.insertAtHead(10);
 
+        linkedList.deleteDataAtHead();
+        linkedList.deleteDataAtTail();
+
         linkedList.printList();
+        linkedList.printSize();
 
 
     }

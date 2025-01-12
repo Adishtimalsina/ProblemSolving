@@ -3,6 +3,7 @@ public class LinkedList {
 
     private Node head;
     private Node tail;
+    private int size;
 
     public LinkedList() {
     }
@@ -32,6 +33,7 @@ public class LinkedList {
         }
         tail.next = newNode;
         tail = newNode;
+        size++;
     }
 
    public void insertAtHead(int val) {
@@ -41,7 +43,25 @@ public class LinkedList {
        }
        newNode.next = head;
        head = newNode;
+       size++;
    }
+
+   //delete data from the head
+   public void deleteDataAtHead() {
+        head = head.next;
+        size--;
+   }
+
+   //delete data from the tail
+    public void deleteDataAtTail() {
+       Node current = head;
+        while(current.next.next != null) {
+            current = current.next;
+        }
+        tail = current;
+        tail.next = null;
+        size--;
+        }
 
     public void printList() {
         Node current = head;
@@ -49,6 +69,10 @@ public class LinkedList {
             System.out.print(current.val + " ");
             current = current.next;
         }
+    }
+
+    public void printSize(){
+        System.out.println("Size of Linked list is: " + size);
     }
 
 
