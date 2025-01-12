@@ -15,6 +15,24 @@ public class Main {
 
         //
         RemoveDuplicate removeDuplicate = new RemoveDuplicate();
-        System.out.print(removeDuplicate.removeDuplicates(array));
+        //System.out.print(removeDuplicate.removeDuplicates(array));
+
+        LinkedList linkedList = new LinkedList();
+
+        linkedList.insertDataAtEnd(1);
+        linkedList.insertDataAtEnd(2);
+        linkedList.insertDataAtEnd(3);
+        linkedList.insertDataAtEnd(4);
+        linkedList.insertDataAtEnd(5);
+        linkedList.insertDataAtEnd(6);
+
+        linkedList.insertAtHead(0);
+        linkedList.insertAtHead(10);
+
+        linkedList.printList();
+
+
     }
+
+
 }
